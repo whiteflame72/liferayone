@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definition xmlns="http://www.xmlportletfactory.org/xml/xmlportletfactory" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.xmlportletfactory.org/xml/xmlportletfactory xmlportletfactory.xsd">
+    <commonData>
+        <client>Example01</client>
+        <projectName>PortletOne</projectName>
+        <version>1</version>
+    </commonData>
+    <applications>
+    <!-- PortletOne Portlet Class and File definition  -->
+		<application>
+			<classDef>
+				<name>Users</name>
+				<title>Users Maintenance</title>
+				<mode>
+					<add>true</add>
+					<delete>true</delete>
+					<modify>true</modify>
+					<browse>true</browse>
+				</mode>
+			</classDef>
+			<fileDef>
+				<name>users</name>
+				<fields>
+					<field>
+						<name>usersId</name>
+						<title>Id</title>
+						<type>
+							<long>
+								<length>5</length>
+								<signed>false</signed>
+								<nullable>false</nullable>
+								<order>true</order>
+							</long>
+						</type>
+						<showFieldInView>true</showFieldInView>
+						<required>true</required>
+					</field>
+					<field>
+						<name>userName</name>
+						<title>Name</title>
+						<type>
+							<varchar>
+								<length>30</length>	
+								<filter>true</filter>
+								<order>true</order>
+							</varchar>
+						</type>
+						<showFieldInView>true</showFieldInView>
+						<required>false</required>
+					</field>
+					<field>
+						<name>userPhoto</name>
+						<title>Photo</title>
+						<type>
+							<image></image>
+						</type>
+						<showFieldInView>true</showFieldInView>
+						<required>false</required>
+					</field>
+				</fields>
+			</fileDef>			
+		</application>
+    </applications>
+</definition>

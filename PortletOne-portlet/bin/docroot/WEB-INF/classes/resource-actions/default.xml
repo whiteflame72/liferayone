@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>PortletOne-portlet</portlet-name>
+		<supports>
+			<action-key>CONFIGURATION</action-key>
+			<action-key>VIEW</action-key>
+		</supports>
+		<community-defaults>
+			<action-key>VIEW</action-key>
+		</community-defaults>
+		<guest-defaults>
+			<action-key>VIEW</action-key>
+		</guest-defaults>
+		<guest-unsupported />
+	</portlet-resource>
+	<model-resource>
+		<model-name>org.xmlportletfactory.portal.example01.model</model-name>
+		<portlet-ref>
+			<portlet-name>PortletOne-portlet</portlet-name>
+		</portlet-ref>
+		<supports>
+			<action-key>ADD_PORTLETONE</action-key>
+			<action-key>PERMISSIONS</action-key>
+		</supports>
+		<community-defaults/>
+		<guest-defaults/>
+		<guest-unsupported>
+			<action-key>ADD_PORTLETONE</action-key>
+		</guest-unsupported>
+	</model-resource>
+	<model-resource>
+		<model-name>org.xmlportletfactory.portal.example01.model.PortletOne</model-name>
+		<portlet-ref>
+			<portlet-name>PortletOne-portlet</portlet-name>
+		</portlet-ref>
+		<supports>
+			<action-key>DELETE</action-key>
+			<action-key>PERMISSIONS</action-key>
+			<action-key>UPDATE</action-key>
+			<action-key>VIEW</action-key>
+		</supports>
+		<community-defaults>
+			<action-key>VIEW</action-key>
+		</community-defaults>
+		<guest-defaults>
+			<action-key>VIEW</action-key>
+		</guest-defaults>
+		<guest-unsupported>
+			<action-key>UPDATE</action-key>
+		</guest-unsupported>
+	</model-resource>
+</resource-action-mapping>

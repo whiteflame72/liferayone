@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.0.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_0_0.dtd">
+<service-builder package-path="org.xmlportletfactory.portal.example01">
+	<author>Jack A. Rider</author>
+	<namespace>portletone</namespace>
+	<entity name="PortletOne" local-service="true" remote-service="false">
+		<!-- Primary key column -->
+		<column name="PortletOneId" type="long" primary="true" />
+
+		<!-- Foreign key columns -->
+		<column name="companyId" type="long" />
+		<column name="groupId" type="long" />
+		<column name="userId" type="long" />
+
+		<!-- Other columns -->
+		<column name="PortletOneDescription" type="String" />
+
+		<!-- Finder Methods Standard -->
+		<finder name="GroupId" return-type="Collection">
+			<finder-column name="groupId" />
+		</finder>
+		<finder name="UserId" return-type="Collection">
+			<finder-column name="userId" />
+		</finder>
+		<finder name="UserIdGroupId" return-type="Collection">
+			<finder-column name="userId" />
+			<finder-column name="groupId" />
+		</finder>
+	</entity>
+	<exceptions>
+		<exception>NoSuchPortletOne</exception>
+	</exceptions>
+
+</service-builder>
